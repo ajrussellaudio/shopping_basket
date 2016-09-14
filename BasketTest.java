@@ -1,8 +1,8 @@
-// import static org.junit.Assert.*;
-// import org.junit.*;
+import static org.junit.Assert.*;
+import org.junit.*;
 
-// public class BasketTest {
+public class BasketTest {
 
-//   Basket basket;
+  Basket basket;
 
-// }
+}
