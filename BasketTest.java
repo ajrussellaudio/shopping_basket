@@ -35,4 +35,11 @@ public class BasketTest {
     assertEquals(0, basket.itemsCount());
   }
 
+  @Test
+  public void canGetSubtotal() {
+    basket.add(milk);
+    basket.add(eggs);
+    assertEquals(2.24, basket.subtotal(), 0.01);
+  }
+
 }

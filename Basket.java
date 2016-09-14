@@ -26,4 +26,12 @@ class Basket {
     }
   }
 
+  public double subtotal() {
+    double subtotal = 0;
+    for( ShoppingItem item : items ){
+      subtotal += item.price();
+    }
+    return subtotal;
+  }
+
 }
