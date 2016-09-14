@@ -27,9 +27,24 @@ class Basket {
   }
 
   public double subtotal() {
+    HashMap<ShoppingItem, Integer> bogofTracker = new HashMap<ShoppingItem, Integer>();
     double subtotal = 0;
     for( ShoppingItem item : items ){
-      subtotal += item.price();
+      if(bogofTracker.get(item) == null){
+        bogofTracker.put(item, 1);
+        subtotal += item.price();
+      }
+      else {
+        bogofTracker.put(item, null);
+      }      
+    }
+    return subtotal;
+  }
+
+  public double total() {
+    double subtotal = subtotal();
+    if(subtotal >= 20){
+      return subtotal * 0.9;
     }
     return subtotal;
   }
